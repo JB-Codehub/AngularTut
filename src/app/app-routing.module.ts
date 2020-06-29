@@ -5,20 +5,9 @@ import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {
-    path: "admin",
-    data: { animation: 'Admin' },
-    loadChildren: () => import("./admin/admin.module").then(m => m.AdminModule)
-  },
-  {
-    path: "user",
-    data: { animation: 'User' },
-    loadChildren: () => import("./user/user.module").then(m => m.UserModule)
+    path: "home",
+    component: AppComponent
   }
-  // ,
-  // {
-  //   path: "",
-  //   component: AppComponent
-  // },
 ];
 
 @NgModule({

@@ -1,11 +1,35 @@
 <h1>
-    Welcome User
+  Welcome Angular Tutorial
 </h1>
-<nav>
-    <a id="Admin" routerLink="/admin" routerLinkActive="active">Admin</a>
-    <a id="user" routerLink="/user" routerLinkActive="active">User</a>
-</nav>
-<div [@routerAnimation]="prepareRoute(outlet)" style="overflow: hidden;">
-    <router-outlet #outlet="outlet">
-    </router-outlet>
+
+Toggle Value : {{ toggle }}
+<br />
+Title Value : {{ title }}
+
+<br />
+Age Value : {{ age }}
+
+<br />
+<input type="checkbox" (click)="age = 30; title = 'jabe'" />
+<!-- <input type="checkbox" (click)="toggle=!toggle;" /> -->
+<input type="checkbox" (click)="changeToggle()" />
+
+<p style="background-color: aqua; color: black;" [hidden]="toggle">
+  Attribute Directive Hidden Tag
+</p>
+
+<!-- Structural Directive -->
+<!-- *ngIf -->
+<div style="background-color: aqua; color: black;" *ngIf="toggle">
+  Structure ngIf
 </div>
+
+<!-- *ngFor -->
+<ul>
+  <li *ngFor="let name of userNames" (click)="userNameSelected(name)">
+    {{ name }}
+  </li>
+</ul>
+
+<br />
+Selected UserName : {{ selectedName }}
