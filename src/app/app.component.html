@@ -1,0 +1,11 @@
+<h1>
+    Welcome User
+</h1>
+<nav>
+    <a id="Admin" routerLink="/admin" routerLinkActive="active">Admin</a>
+    <a id="user" routerLink="/user" routerLinkActive="active">User</a>
+</nav>
+<div [@routerAnimation]="prepareRoute(outlet)" style="overflow: hidden;">
+    <router-outlet #outlet="outlet">
+    </router-outlet>
+</div>
